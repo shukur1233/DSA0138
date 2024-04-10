@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void sumOfEvenAndOdd(int arr[], int n, int& sumEven, int& sumOdd, int& countEven, int& countOdd) {
+    sumEven = 0;
+    sumOdd = 0;
+    countEven = 0;
+    countOdd = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            sumEven += arr[i];
+            countEven++;
+        } else {
+            sumOdd += arr[i];
+            countOdd++;
+        }
+    }
+}
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int sumEven, sumOdd, countEven, countOdd;
+    sumOfEvenAndOdd(arr, n, sumEven, sumOdd, countEven, countOdd);
+    cout << "Sum of even numbers: " << sumEven << endl;
+    cout << "Sum of odd numbers: " << sumOdd << endl;
+    cout << "Number of even numbers: " << countEven << endl;
+    cout << "Number of odd numbers: " << countOdd << endl;
+    return 0;
+}
