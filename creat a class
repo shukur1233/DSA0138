@@ -1,0 +1,29 @@
+#include<iostream>
+class Dog
+{
+    private:
+        int age;
+    public:
+        void bark() 
+        {
+            std::cout << "Woof!" << std::endl;
+        }
+    public:
+        void setAge(int newAge)
+        {
+            age = newAge;
+        }
+    public:
+        int getAge() 
+        {
+            return age;
+        }
+};
+int main() 
+{
+    Dog myDog;
+    myDog.bark();
+    myDog.setAge(5);
+    std::cout << "My dog is " << myDog.getAge() << " years old." << std::endl;
+    return 0;
+}
