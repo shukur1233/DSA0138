@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class room
+{
+public:
+double length;
+double breadth;
+double height;
+double calculate area()
+{
+return length+breadth;
+}
+double calculatervolume()
+{
+return length*breadth*height;
+}
+};
